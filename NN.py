@@ -60,6 +60,5 @@ def conv(img, conv_filter):
 	return feature_maps
 
 l1_feature_maps = conv(img, l1_filter)
-cv2.imshow('L1-1', l1_feature_maps[:, :, 0])
-cv2.imshow('L1-2', l1_feature_maps[:, :, 1])
-cv2.waitKey(0)
+
+print('img shape',img.shape,'\nconv fil shape',l1_filter.shape)
