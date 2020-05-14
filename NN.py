@@ -14,7 +14,7 @@ l1_filter[1, :, :] = np.array([[[1, 1, 1],[0, 0, 0],[-1, -1, -1]]])
 def conv_(img, conv_filter):
 	filter_size = conv_filter.shape[0]
 	result = np.zeros((img.shape))
-	#Lopping through the image ti apply the convolution
+	#Lopping through the image to apply the convolution
 	for r in np.uint16(np.arange(filter_size/2, img.shape[0]-filter_size/2-2)):
 		for c in np.uint16(np.arange(filter_size/2, img.shape[1]-filter_size/2-2)):
 			#getting the current region to get multiplied with the filter
@@ -61,4 +61,6 @@ def conv(img, conv_filter):
 
 l1_feature_maps = conv(img, l1_filter)
 
-print('img shape',img.shape,'\nconv fil shape',l1_filter.shape)
+cv2.imshow("map 1", l1_feature_maps[:, :, 0])
+cv2.imshow("map 2", l1_feature_maps[:, :, 1])
+cv2.waitKey(0)
