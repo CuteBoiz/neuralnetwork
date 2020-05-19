@@ -254,12 +254,12 @@ img = skimage.color.rgb2gray(img)
 ```python
 l1_filter = np.zeros((2, 3, 3))
 l1_filter[0, :, :] = np.array([[[-1, 0, 1],
-								[-1, 0, 1],
-								[-1, 0, 1]]])
+	[-1, 0, 1],
+	[-1, 0, 1]]])
 
 l1_filter[1, :, :] = np.array([[[1, 1, 1],
-								[0, 0, 0],
-								[-1, -1, -1]]])
+	[0, 0, 0],
+	[-1, -1, -1]]])
 ```
 
 ### Bước 3: 
@@ -297,6 +297,15 @@ def conv(img, conv_filter):
 	return feature_maps
 ```
 
+
+
+<p>Function bắt đầu từ việc kiểm tra điều kiện của img và filter để có thể tiến hành covolution:</p>
+
+<ul>
+	<li>Nếu là ảnh màu thì depth của ảnh và filter phải bằng nhau</li>
+	<li>Filter phải là ma trận vuông và có số chiều là lẻ (3x3, 5x5, 7x7, …)</li>
+</ul>
+
 ```python
 if len(img.shape) > 2 or len(conv_filter.shape) > 3:
 		if img.shape[-1] != conv_filter.shape[-1]:
@@ -310,18 +319,6 @@ if len(img.shape) > 2 or len(conv_filter.shape) > 3:
 		sys.exit()
 ```
 
-<p>Function bắt đầu từ việc kiểm tra điều kiện của img và filter để có thể tiến hành covolution:</p>
-
-<ul>
-	<li>Nếu là ảnh màu thì depth của ảnh và filter phải bằng nhau</li>
-	<li>Filter phải là ma trận vuông và có số chiều là lẻ (3x3, 5x5, 7x7, …)</li>
-</ul>
-
-```python
-feature_maps = np.zeros((img.shape[0] - conv_filter.shape[1] + 1,
-							img.shape[1] - conv_filter.shape[2] + 1,
-							conv_filter.shape[0]))
-```
 
 <p>Tiếp đến sẽ tạo ra một ma trận rỗng để chứa feature image:</p>
 
@@ -331,6 +328,15 @@ feature_maps = np.zeros((img.shape[0] - conv_filter.shape[1] + 1,
 </ul>
 
 ```python
+feature_maps = np.zeros((img.shape[0] - conv_filter.shape[1] + 1,
+	img.shape[1] - conv_filter.shape[2] + 1,
+	conv_filter.shape[0]))
+```
+
+
+<p>Sau đó sẽ convolution từng filter vào ảnh đầu vào và lưu vào feature image rỗng</p>
+
+```python
 for filter_num in range(conv_filter.shape[0]):
 		print("Filter", filter_num + 1)
 		curr_filter = conv_filter[filter_num]
@@ -338,7 +344,6 @@ for filter_num in range(conv_filter.shape[0]):
 		feature_maps[:, :, filter_num] = conv_(img, curr_filter)
 ```
 
-<p>Sau đó sẽ convolution từng filter vào ảnh đầu vào và lưu vào feature image rỗng</p>
 
 <p> Thuật Toán Convolution: </p>
 
