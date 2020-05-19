@@ -34,11 +34,55 @@
 
 [II. CẤU TRÚC MẠNG CNN](https://github.com/CuteBoiz/)
 
+<ul>
+<li>
+
+[1. Local Receptive Field](https://github.com/CuteBoiz/)
+
+</li>
+<li>
+
+[2. Shared Weight and Biases](https://github.com/CuteBoiz/)
+
+</li>
+<li>
+
+[3. Pooling Layers](https://github.com/CuteBoiz/)
+
+</li>
+</ul>
 </li>
 <li>
 
 [III. CÁCH LẬP TRÌNH TẠO RA CNN](https://github.com/CuteBoiz/)
 
+<ul>
+<li>
+
+[1. Đọc Ảnh Đầu Vào](https://github.com/CuteBoiz/)
+
+</li>
+<li>
+
+[2. Chuẩn Bị Kernel](https://github.com/CuteBoiz/)
+
+</li>
+<li>
+
+[3. Convolution Layers](https://github.com/CuteBoiz/)
+
+</li>
+<li>
+
+[4. ReLU Layers](https://github.com/CuteBoiz/)
+
+</li>
+<li>
+
+[5. Max Pooling Layers](https://github.com/CuteBoiz/)
+
+</li>
+</ul>
 </li>
 <li>
 
@@ -334,7 +378,7 @@ feature_maps = np.zeros((img.shape[0] - conv_filter.shape[1] + 1,
 ```
 
 
-<p>Sau đó sẽ convolution từng filter vào ảnh đầu vào và lưu vào feature image rỗng</p>
+<p>Sau đó sẽ convolution từng filter vào ảnh đầu vào và lưu vào feature image rỗng:</p>
 
 ```python
 for filter_num in range(conv_filter.shape[0]):
