@@ -20,7 +20,7 @@
 </li>
 <li>
 
-[2. Neural Network]
+[2. Neural Network](https://github.com/CuteBoiz/)
 
 </li>
 <li>
@@ -150,3 +150,165 @@
 <p>Vì vậy có thể xem CNN đơn giản là Deep Neural Network chứa các Hidden Layer bao gồm Covolution và Pooling Function. </p>
 
 ## II. CẤU TRÚC MẠNG CONVOLUTION NETWORK
+
+<p>Mạng CNN sử dụng 3 ý tưởng cơ bản:</p>
+
+<ul>
+	<li>Local Receptive Field</li>
+	<li>Shared weights and biases</li>
+	<li>Pooling</li>
+</ul>
+
+### 1. Local Receptive Field (Trường tiếp nhận cục bộ)
+
+<p>Đầu vào của mạng CNN là một ảnh. <b><i>Vd:</i></b> ảnh có kích thước 28x28 và giá trị mỗi điểm ảnh là một ô trong ma trận. Trong mô hình NN truyền thống thì chúng ta sẽ kết nối các neuron thành 1 chuỗi với nhau.</p>
+
+<p>Tuy nhiên đối với CNN, chỉ cần kết nối trong vùng nhỏ của các đầu neuron đầu vào với các filter. Ta có thể tạo ra 1 hidden layer bằng cách sau:</p>
+
+<p>Tạo ra neuron ẩn đầu tiên trong lớp ẩn 1</p>
+
+## IMG 10
+
+<p>Dịch filter qua bên phải 1 cột sẽ tạo được neuron ẩn thứ 2</p>
+
+## IMG 11
+
+<p>Với ảnh 28x28 và filter 5x5 ta sẽ tạo được ma trận ẩn (28 - 5 + 1)  = 24x24</p>
+
+<p>Như vậy, local receptive field thích hợp cho việc phân tách dữ liệu ảnh, giúp chọn ra những vùng ảnh có giá trị nhất cho việc đánh giá phân lớp. </p>
+
+### 2. Shared Weights and Biases (Trọng số chia sẻ)
+
+<p>Trọng số chia sẻ giúp chúng ta có thể phát hiện được 1 feature ở các vị trí khác nhau trên ảnh. </p>
+
+<p>Cho filter như hình bên dưới:</p>
+
+## IMG 12
+
+<p></p>
+
+## IMG 13
+
+<p>Apply filter vào ảnh trong trường tiếp nhận cục bộ: </p>
+
+## IMG 14
+
+<p>Cơ bản, bên trong ảnh đầu vào nếu có một feature tương tự với filter sẽ cho ra một kết quả lớn. Nếu chuyến filter sang khu vực khác không trùng với filter thì sẽ cho kết quả bằng 0:</p>
+
+<p>Vì thế, convolution sẽ tìm ra được đúng đường cong trong filter dù nó nằm ở bất cứ đâu trên ảnh. </p>
+
+<p>Với cấu trúc trên ta sẽ có thể phát hiện được chỉ một feature. Vì vậy nếu dùng nó cho các bài toán lớn hơn như phát hiện khuôn mặt thì ta sẽ cần nhiều hơn một feature map. Và 1 convolutional layer hoàn chỉnh sẽ bao gồm nhiều feature maps.</p>
+
+## IMG 15
+
+<p>Điểm mạnh lớn nhất của sharing weights and biases là giảm mạnh số các thông số bên trong convolutional network.</p>
+
+<p>Với mỗi feature map ta cần 25 (5 x 5) shared wieght, cộng thêm 1 shared bias. Vì vậy mỗi feature map sẽ có 26 thông số. Nếu có 20 feature map thì ta sẽ có 20x26 = 520 thông số cho 1 CNN bé hơn rất nhiều so với NN thông thường với lớp đầu tiên 28x28 = 784 với 30 hidden neuron thì sẽ có 784x30 +30 = 23550 thông số.</p>
+
+### 3. Pooling Layers
+
+<p>Ngoài các lớp trên, CNN còn có các Pooling Layers. Pooling Layer thường được dùng ngay sau các Convolutional Layer. Chức năng của lớp này là đơn giản hóa giảm bớt số lượng neuron đầu ra của Convolutional Layer.</p>
+
+
+## IMG 16
+
+<p>Nếu áp dùng Pooling cho map 24x24 thì sau khi pooling Feature map đó sẽ chỉ còn lại kích thước 12x12</p>
+
+## IMG 17
+
+<p>Ta có thể cho rằng max-pooling như một cách tìm feature được phát hiện ở vùng nào trên ảnh. Sau đó nó sẽ đưa ra thông tin vị trí chính xác. Một lợi ích lớn là có ít hơn nhiều các pooled feature vì vậy chúng giúp giảm số lượng lớn các thông số cho các lớp sau này.</p>
+
+## III. CÁCH LẬP TRÌNH CONVOLUTIONAL NEURAL NETWORK
+
+<p><b></b></p>
+
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+### Bước 1:
+
+<p></p>
+
+```python
+
+```
+
+## IMG 18
+
+### Bước 2
+
+<p></p>
+
+```python
+
+```
+
+### Bước 3
+
+<p></p>
+
+## IMG 19
+
+```python
+
+```
+
+<p></p>
+
+<ul>
+	<li></li>
+	<li></li>
+</ul>
+
+<p></p>
+
+<ul>
+	<li></li>
+</ul>
+
+<p></p>
+
+```python
+
+```
+
+## IMG 20
+## IMG 21
+
+<p></p>
+
+### Bước 4:
+
+```python
+
+```
+
+<p></p>
+
+## IMG 22
+## IMG 23
+
+### Bước 5:
+
+```sh
+
+```
+
+## IMG 24
+## IMG 25
+
+Full Code: 
+
+## IV. NGUỒN THAM KHẢO
+
+<ul>
+	<li><a href="https://www.kdnuggets.com/2018/04/building-convolutional-neural-network-numpy-scratch.html"></li>
+	<li><a href="https://towardsdatascience.com/covolutional-neural-network-cb0883dd6529"></li>
+	<li><a href="https://chsasank.github.io/deep-learning-crash-course-2.html"></li>
+	<li><a href="https://towardsdatascience.com/understanding-neural-networks-from-neuron-to-rnn-cnn-and-deep-learning-cd88e90e0a90"></li>
+</ul>
