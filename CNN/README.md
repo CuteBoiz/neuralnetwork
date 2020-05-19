@@ -230,7 +230,7 @@
 	<li><b><i>Max Pooling Layer:</i></b> Sử dụng max pooling vào output của ReLU Layer</li>
 </ul>
 
-### Bước 1:
+### Bước 1: Đọc Ảnh Đầu Vào
 
 <p>Ta sẽ dùng thư viện skimage Python và chuyển ảnh RGB về Gray</p>
 
@@ -247,63 +247,165 @@ img = skimage.color.rgb2gray(img)
 
 ## IMG 18
 
-### Bước 2
+### Bước 2: Chuẩn Bị Kernel
 
-<p></p>
+<p>Convulution hay tích chập là nhân từng phần tử trong ma trận 3. Sliding windows hay còn gọi là kernel, filter hoặc feature detect là một ma trận vuông có kich thước nhỏ 3x3 hoặc 5x5</p>
 
 ```python
+l1_filter = np.zeros((2, 3, 3))
+l1_filter[0, :, :] = np.array([[[-1, 0, 1],
+								[-1, 0, 1],
+								[-1, 0, 1]]])
 
+l1_filter[1, :, :] = np.array([[[1, 1, 1],
+								[0, 0, 0],
+								[-1, -1, -1]]])
 ```
 
-### Bước 3
+### Bước 3: 
 
-<p></p>
+<p>Covolution là nhân từng phần tử của ma trận kernel với ảnh đầu vào. Kết quả nhận được một ma trận được gọi là <b><i>Feature Maps</i></b> hay <b><i>Convolved Feature</i></b>.</p>
 
 ## IMG 19
 
 ```python
-
+feature_maps = conv(img, l1_filter)
 ```
 
-<p></p>
+```python
+def conv(img, conv_filter):
+	if len(img.shape) > 2 or len(conv_filter.shape) > 3:
+		if img.shape[-1] != conv_filter.shape[-1]:
+			print("Error: Number of channels of image and filter must match")
+			sys.exit()
+	if conv_filter.shape[1] != conv_filter.shape[2]: # Check if filter dimensions are equal.  
+		print('Error: Filter must be a square matrix. I.e. number of rows and columns must match.')
+		sys.exit()
+	if conv_filter.shape[1] % 2 == 0:
+		print('Error: Filter must have an odd size. I.e. number of rows and columns must be odd.')
+		sys.exit()
 
-<ul>
-	<li></li>
-	<li></li>
-</ul>
+	feature_maps = np.zeros((img.shape[0] - conv_filter.shape[1] + 1,
+							img.shape[1] - conv_filter.shape[2] + 1,
+							conv_filter.shape[0]))
 
-<p></p>
-
-<ul>
-	<li></li>
-</ul>
-
-<p></p>
+	for filter_num in range(conv_filter.shape[0]):
+		print("Filter", filter_num + 1)
+		curr_filter = conv_filter[filter_num]
+		print(curr_filter)
+		feature_maps[:, :, filter_num] = conv_(img, curr_filter)
+	return feature_maps
+```
 
 ```python
+if len(img.shape) > 2 or len(conv_filter.shape) > 3:
+		if img.shape[-1] != conv_filter.shape[-1]:
+			print("Error: Number of channels of image and filter must match")
+			sys.exit()
+	if conv_filter.shape[1] != conv_filter.shape[2]: # Check if filter dimensions are equal.  
+		print('Error: Filter must be a square matrix. I.e. number of rows and columns must match.')
+		sys.exit()
+	if conv_filter.shape[1] % 2 == 0:
+		print('Error: Filter must have an odd size. I.e. number of rows and columns must be odd.')
+		sys.exit()
+```
 
+<p>Function bắt đầu từ việc kiểm tra điều kiện của img và filter để có thể tiến hành covolution:</p>
+
+<ul>
+	<li>Nếu là ảnh màu thì depth của ảnh và filter phải bằng nhau</li>
+	<li>Filter phải là ma trận vuông và có số chiều là lẻ (3x3, 5x5, 7x7, …)</li>
+</ul>
+
+```python
+feature_maps = np.zeros((img.shape[0] - conv_filter.shape[1] + 1,
+							img.shape[1] - conv_filter.shape[2] + 1,
+							conv_filter.shape[0]))
+```
+
+<p>Tiếp đến sẽ tạo ra một ma trận rỗng để chứa feature image:</p>
+
+<ul>
+	<li>Dimesion của feature image khi không có stride và padding  
+	[image.x – filter.x + 1, image.y – filter.y + 1, số filter]</li>
+</ul>
+
+```python
+for filter_num in range(conv_filter.shape[0]):
+		print("Filter", filter_num + 1)
+		curr_filter = conv_filter[filter_num]
+		print(curr_filter)
+		feature_maps[:, :, filter_num] = conv_(img, curr_filter)
+```
+
+<p>Sau đó sẽ convolution từng filter vào ảnh đầu vào và lưu vào feature image rỗng</p>
+
+<p> Thuật Toán Convolution: </p>
+
+```python
+def conv_(img, filter): 
+	filter_size = filter.shape[0]
+	result = np.zeros((img.shape))
+	x = np.uint16(filter_size/2)
+	#Looping through the image to apply the convolution operation.
+	for r in np.arange(0, img.shape[0]-x-2):
+		for c in np.arange(0, img.shape[1]-x-2):
+			curr_region = img[r:r+filter_size, c:c+filter_size]
+			curr_result = curr_region * filter
+			result[r, c] = np.sum(curr_result)
+
+	final_result = result[x:result.shape[0]-x, x:result.shape[1]-x]
+	return final_result
 ```
 
 ## IMG 20
 ## IMG 21
 
-<p></p>
+<p>Từng output của mỗi filter sau đó sẽ được đưa vào ReLU Layer</p>
 
-### Bước 4:
+### Bước 4: ReLU Activation Function
 
 ```python
+relu_maps = ReLU(feature_maps)
 
 ```
 
-<p></p>
+```python
+def ReLU(feature_maps):
+	relu_out = np.zeros((feature_maps.shape))
+	for map_num in range (feature_maps.shape[-1]):
+		for r in np.arange(0, feature_maps.shape[0]):
+			for c in np.arange(0, feature_maps.shape[1]):
+				relu_out[r, c, map_num] = np.max(feature_maps[r, c, map_num], 0)
+	return relu_out
+```
+
+<p>Thuật toán relu là chỉ cần lặp qua từng phần tử của feature image nếu phần từ đó lớn hơn bằng 0 thì vẫn là chính nó, nếu nó bé hơn 0 thì sẽ bằng 0</p>
 
 ## IMG 22
 ## IMG 23
 
-### Bước 5:
+### Bước 5: Max Pooling Layer
 
-```sh
+```python
+pool_map = pooling(relu_maps, 2, 2)
 
+```
+
+```python
+def pooling(feature_maps, size=2, stride=2):
+	pool_out = np.zeros((np.uint16((feature_maps.shape[0]-size+1)/stride),
+						np.uint16((feature_maps.shape[1]-size+1)/stride),
+						feature_maps.shape[-1]))
+	for map_num in range(feature_maps.shape[-1]):
+		r_out = 0
+		for r in np.arange(0, feature_maps.shape[0]-size-1, stride):
+			c_out = 0
+			for c in np.arange(0, feature_maps.shape[1]-size-1, stride):
+				pool_out[r_out, c_out, map_num] = np.max(feature_maps[r:r+size, c:c+size])
+				c_out = c_out + 1
+			r_out = r_out + 1
+	return pool_out
 ```
 
 ## IMG 24
