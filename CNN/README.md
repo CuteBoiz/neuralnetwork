@@ -1,5 +1,19 @@
 # Convolution Neural Network
 
+## Table of Contents
+
+<li>
+<ul>
+[I. NEURAL NETWORK LÀ GÌ]()
+</ul>
+<ul>
+[II. CẤU TRÚC MẠNG CNN]()
+</ul>
+<ul>
+[III. CÁCH LẬP TRÌNH TẠO RA CNN]()
+</ul>
+</li>
+
 ## I. NEURAL NETWORK LÀ GÌ ?
 
 <p>Neural Network là một trong những thuật toán machine learning phổ biến nhất hiện tại. Điều đó đã được chứng minh bởi Neural Networks vượt qua các giải thuật khác về hiệu quả cũng như tốc độ. Với một số biến thể như CNN, RNN, Autoencoders, DeepLearning, …</p>
@@ -15,3 +29,7 @@
 ##IMG
 
 <p>Các function sử dụng trong một neuron thường được gọi là một Activation Funtion. Hiện nay có rất nhiều các Activation Function như: step, sigmoid, tanh, ReLU, leaky ReLU, …</p>
+
+### 1. Activation Function
+
+#### a. Step Function
