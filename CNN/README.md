@@ -220,22 +220,29 @@
 
 ## III. CÁCH LẬP TRÌNH CONVOLUTIONAL NEURAL NETWORK
 
-<p><b></b></p>
+<p><b>Các bước để tạo ra CNN</b></p>
 
 <ul>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
-	<li></li>
+	<li>Đọc input image</li>
+	<li>Chuẩn bị Kernel(Filter)</li>
+	<li><b><i>Convolution Layer:</i></b> tích chập từng kernel với input image tạo ra các Feature Map</li>
+	<li><b><i>ReLU Layer:</i></b> Áp dụng ReLU Activation funciton vào feature map</li>
+	<li><b><i>Max Pooling Layer:</i></b> Sử dụng max pooling vào output của ReLU Layer</li>
 </ul>
 
 ### Bước 1:
 
-<p></p>
+<p>Ta sẽ dùng thư viện skimage Python và chuyển ảnh RGB về Gray</p>
 
 ```python
+import skimage.data
+import numpy as np
+import cv2
+import sys
 
+img = skimage.data.chelsea()
+
+img = skimage.color.rgb2gray(img)
 ```
 
 ## IMG 18
@@ -307,8 +314,8 @@ Full Code:
 ## IV. NGUỒN THAM KHẢO
 
 <ul>
-	<li><a href="https://www.kdnuggets.com/2018/04/building-convolutional-neural-network-numpy-scratch.html"></li>
-	<li><a href="https://towardsdatascience.com/covolutional-neural-network-cb0883dd6529"></li>
-	<li><a href="https://chsasank.github.io/deep-learning-crash-course-2.html"></li>
-	<li><a href="https://towardsdatascience.com/understanding-neural-networks-from-neuron-to-rnn-cnn-and-deep-learning-cd88e90e0a90"></li>
+	<li><a href="https://www.kdnuggets.com/2018/04/building-convolutional-neural-network-numpy-scratch.html">https://www.kdnuggets.com/2018/04/building-convolutional-neural-network-numpy-scratch.html</li>
+	<li><a href="https://towardsdatascience.com/covolutional-neural-network-cb0883dd6529">https://towardsdatascience.com/covolutional-neural-network-cb0883dd6529</li>
+	<li><a href="https://chsasank.github.io/deep-learning-crash-course-2.html">https://chsasank.github.io/deep-learning-crash-course-2.html</li>
+	<li><a href="https://towardsdatascience.com/understanding-neural-networks-from-neuron-to-rnn-cnn-and-deep-learning-cd88e90e0a90">https://towardsdatascience.com/understanding-neural-networks-from-neuron-to-rnn-cnn-and-deep-learning-cd88e90e0a90</li>
 </ul>
