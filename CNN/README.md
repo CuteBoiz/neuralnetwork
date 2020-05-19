@@ -254,8 +254,8 @@ img = skimage.color.rgb2gray(img)
 ```python
 l1_filter = np.zeros((2, 3, 3))
 l1_filter[0, :, :] = np.array([[[-1, 0, 1],
-			[-1, 0, 1],
-			[-1, 0, 1]]])
+				[-1, 0, 1],
+				[-1, 0, 1]]])
 
 l1_filter[1, :, :] = np.array([[[1, 1, 1],
 				[0, 0, 0],
@@ -308,9 +308,9 @@ def conv(img, conv_filter):
 
 ```python
 if len(img.shape) > 2 or len(conv_filter.shape) > 3:
-		if img.shape[-1] != conv_filter.shape[-1]:
-			print("Error: Number of channels of image and filter must match")
-			sys.exit()
+	if img.shape[-1] != conv_filter.shape[-1]:
+		print("Error: Number of channels of image and filter must match")
+		sys.exit()
 	if conv_filter.shape[1] != conv_filter.shape[2]: # Check if filter dimensions are equal.  
 		print('Error: Filter must be a square matrix. I.e. number of rows and columns must match.')
 		sys.exit()
@@ -329,8 +329,8 @@ if len(img.shape) > 2 or len(conv_filter.shape) > 3:
 
 ```python
 feature_maps = np.zeros((img.shape[0] - conv_filter.shape[1] + 1,
-	img.shape[1] - conv_filter.shape[2] + 1,
-	conv_filter.shape[0]))
+				img.shape[1] - conv_filter.shape[2] + 1,
+				conv_filter.shape[0]))
 ```
 
 
@@ -338,10 +338,10 @@ feature_maps = np.zeros((img.shape[0] - conv_filter.shape[1] + 1,
 
 ```python
 for filter_num in range(conv_filter.shape[0]):
-		print("Filter", filter_num + 1)
-		curr_filter = conv_filter[filter_num]
-		print(curr_filter)
-		feature_maps[:, :, filter_num] = conv_(img, curr_filter)
+	print("Filter", filter_num + 1)
+	curr_filter = conv_filter[filter_num]
+	print(curr_filter)
+	feature_maps[:, :, filter_num] = conv_(img, curr_filter)
 ```
 
 
