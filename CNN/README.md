@@ -4,13 +4,19 @@
 
 <li>
 <ul>
-[I. NEURAL NETWORK LÀ GÌ]()
+
+[I. NEURAL NETWORK LÀ GÌ](https://github.com/CuteBoiz/)
+
 </ul>
 <ul>
-[II. CẤU TRÚC MẠNG CNN]()
+
+[II. CẤU TRÚC MẠNG CNN](https://github.com/CuteBoiz/)
+
 </ul>
 <ul>
-[III. CÁCH LẬP TRÌNH TẠO RA CNN]()
+
+[III. CÁCH LẬP TRÌNH TẠO RA CNN](https://github.com/CuteBoiz/)
+
 </ul>
 </li>
 
