@@ -3,9 +3,21 @@
 ## Table of Contents
 
 <ul>
-<li> [I. NEURAL NETWORK LÀ GÌ](https://github.com/CuteBoiz/) </li>
-<li> [II. CẤU TRÚC MẠNG CNN](https://github.com/CuteBoiz/) </li>
-<li> [III. CÁCH LẬP TRÌNH TẠO RA CNN](https://github.com/CuteBoiz/) </li>
+<li> 
+
+[I. NEURAL NETWORK LÀ GÌ](https://github.com/CuteBoiz/) 
+
+</li>
+<li> 
+
+[II. CẤU TRÚC MẠNG CNN](https://github.com/CuteBoiz/)
+
+</li>
+<li>
+
+[III. CÁCH LẬP TRÌNH TẠO RA CNN](https://github.com/CuteBoiz/)
+ 
+</li>
 </ul>
 
 ## I. NEURAL NETWORK LÀ GÌ ?
