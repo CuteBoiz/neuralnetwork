@@ -102,7 +102,7 @@
 
 <p>Đối với lĩnh vực toán học, một Neuron trong thế giới Machine Learning là một placeholder cho một phép toán, và công việc duy nhất của chúng là đưa ra một output bằng cách áp dụng phép toán trên các input cho sẵn.</p>
 
-<a href="https://imgur.com/Jlt4tqS"><img src="https://i.imgur.com/Jlt4tqS.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/Jlt4tqS"><img src="https://i.imgur.com/Jlt4tqS.png" title="source: imgur.com" height="400" width="200" /></a>
 
 <p>Các function sử dụng trong một neuron thường được gọi là một Activation Funtion. Hiện nay có rất nhiều các Activation Function như: step, sigmoid, tanh, ReLU, leaky ReLU, …</p>
 
@@ -433,7 +433,7 @@ def ReLU(feature_maps):
 
 <p>Thuật toán relu là chỉ cần lặp qua từng phần tử của feature image nếu phần từ đó lớn hơn bằng 0 thì vẫn là chính nó, nếu nó bé hơn 0 thì sẽ bằng 0</p>
 
-<a href="https://imgur.com/Q6pgEGk"><img src="https://i.imgur.com/Q6pgEGk.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/Q6pgEGk"><img src="https://i.imgur.com/Q6pgEGk.png" title="source: imgur.com" height="" width="" /></a>
 
 <a href="https://imgur.com/kPzYrSp"><img src="https://i.imgur.com/kPzYrSp.png" title="source: imgur.com" /></a>
 
