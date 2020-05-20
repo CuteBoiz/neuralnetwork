@@ -5,88 +5,89 @@
 <ul>
 <li> 
 
-[I. NEURAL NETWORK LÀ GÌ](https://github.com/CuteBoiz/) 
+[I. NEURAL NETWORK LÀ GÌ](https://github.com/CuteBoiz/neuralnetwork/tree/master/1-CNN#i-neural-network-l%C3%A0-g%C3%AC-) 
 
 <ul>
 <li>
 
-[Neuron là gì?](https://github.com/CuteBoiz/)
+[Neuron là gì?](https://github.com/CuteBoiz/neuralnetwork/tree/master/1-CNN#neuron-l%C3%A0-g%C3%AC)
 
 </li>
 <li>
 
-[1. Activation Function](https://github.com/CuteBoiz/)
+[1. Activation Function](https://github.com/CuteBoiz/neuralnetwork/tree/master/1-CNN#1-activation-function)
 
 </li>
 <li>
 
-[2. Neural Network](https://github.com/CuteBoiz/)
+[2. Neural Network](https://github.com/CuteBoiz/neuralnetwork/tree/master/1-CNN#2-neural-network)
 
 </li>
 <li>
 
-[3. Convolutional Neural Network(CNN)](https://github.com/CuteBoiz/)
+[3. Convolutional Neural Network(CNN)](https://github.com/CuteBoiz/neuralnetwork/tree/master/1-CNN#3-covolutional-neural--network-cnn)
 </li>
 </ul>
 
 </li>
 <li> 
 
-[II. CẤU TRÚC MẠNG CNN](https://github.com/CuteBoiz/)
+[II. CẤU TRÚC MẠNG CNN](https://github.com/CuteBoiz/neuralnetwork/tree/master/1-CNN#ii-c%E1%BA%A5u-tr%C3%BAc-m%E1%BA%A1ng-convolution-network)
 
 <ul>
 <li>
 
-[1. Local Receptive Field](https://github.com/CuteBoiz/)
+[1. Local Receptive Field](https://github.com/CuteBoiz/neuralnetwork/tree/master/1-CNN#1-local-receptive-field-tr%C6%B0%E1%BB%9Dng-ti%E1%BA%BFp-nh%E1%BA%ADn-c%E1%BB%A5c-b%E1%BB%99)
 
 </li>
 <li>
 
-[2. Shared Weight and Biases](https://github.com/CuteBoiz/)
+[2. Shared Weight and Biases](https://github.com/CuteBoiz/neuralnetwork/tree/master/1-CNN#2-shared-weights-and-biases-tr%E1%BB%8Dng-s%E1%BB%91-chia-s%E1%BA%BB)
 
 </li>
 <li>
 
-[3. Pooling Layers](https://github.com/CuteBoiz/)
+[3. Pooling Layers](https://github.com/CuteBoiz/neuralnetwork/tree/master/1-CNN#3-pooling-layers)
 
 </li>
 </ul>
 </li>
 <li>
 
-[III. CÁCH LẬP TRÌNH TẠO RA CNN](https://github.com/CuteBoiz/)
+[III. CÁCH LẬP TRÌNH TẠO RA CNN](https://github.com/CuteBoiz/neuralnetwork/tree/master/1-CNN#iii-c%C3%A1ch-l%E1%BA%ADp-tr%C3%ACnh-convolutional-neural-network)
 
 <ul>
 <li>
 
-[1. Đọc Ảnh Đầu Vào](https://github.com/CuteBoiz/)
+[1. Đọc Ảnh Đầu Vào](https://github.com/CuteBoiz/neuralnetwork/tree/master/1-CNN#b%C6%B0%E1%BB%9Bc-1-%C4%91%E1%BB%8Dc-%E1%BA%A3nh-%C4%91%E1%BA%A7u-v%C3%A0o)
 
 </li>
 <li>
 
-[2. Chuẩn Bị Kernel](https://github.com/CuteBoiz/)
+[2. Chuẩn Bị Kernel](https://github.com/CuteBoiz/neuralnetwork/tree/master/1-CNN#b%C6%B0%E1%BB%9Bc-2-chu%E1%BA%A9n-b%E1%BB%8B-kernel)
 
 </li>
 <li>
 
-[3. Convolution Layers](https://github.com/CuteBoiz/)
+[3. Convolution Layers](https://github.com/CuteBoiz/neuralnetwork/tree/master/1-CNN#b%C6%B0%E1%BB%9Bc-3-convolution-layer)
 
 </li>
 <li>
 
-[4. ReLU Layers](https://github.com/CuteBoiz/)
+[4. ReLU Layers](https://github.com/CuteBoiz/neuralnetwork/tree/master/1-CNN#b%C6%B0%E1%BB%9Bc-4-relu-activation-function)
 
 </li>
 <li>
 
-[5. Max Pooling Layers](https://github.com/CuteBoiz/)
+[5. Max Pooling Layers](https://github.com/CuteBoiz/neuralnetwork/tree/master/1-CNN#b%C6%B0%E1%BB%9Bc-5-max-pooling-layer)
 
 </li>
 </ul>
 </li>
 <li>
 
-[IV. NGUỒN THAM KHẢO](https://github.com/CuteBoiz/)
+[IV. NGUỒN THAM KHẢO](https://github.com/CuteBoiz/neuralnetwork/tree/master/1-CNN#iv-ngu%E1%BB%93n-tham-kh%E1%BA%A3o)
+
 </li>
 </ul>
 
