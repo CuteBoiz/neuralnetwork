@@ -288,7 +288,7 @@ img = skimage.color.rgb2gray(img)
 
 <p>Ảnh đầu vào: </p>
 
-<a href="https://imgur.com/wswHAyt"><img src="https://i.imgur.com/wswHAyt.png" title="source: imgur.com" height="400" width="450" /></a>
+<a href="https://imgur.com/wswHAyt"><img src="https://i.imgur.com/wswHAyt.png" title="source: imgur.com" height="350" width="420" /></a>
 
 ### Bước 2: Chuẩn Bị Kernel
 
