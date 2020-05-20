@@ -406,9 +406,9 @@ def conv_(img, filter):
 	return final_result
 ```
 
-<a href="https://imgur.com/3p7Z89M"><img src="https://i.imgur.com/3p7Z89M.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/3p7Z89M"><img src="https://i.imgur.com/3p7Z89M.png" title="source: imgur.com" height="300" width="380" /></a>
 
-<a href="https://imgur.com/yPKr99C"><img src="https://i.imgur.com/yPKr99C.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/yPKr99C"><img src="https://i.imgur.com/yPKr99C.png" title="source: imgur.com" height="300" width="380" /></a>
 
 <p>Từng output của mỗi filter sau đó sẽ được đưa vào ReLU Layer</p>
 
@@ -431,9 +431,9 @@ def ReLU(feature_maps):
 
 <p>Thuật toán relu là chỉ cần lặp qua từng phần tử của feature image nếu phần từ đó lớn hơn bằng 0 thì vẫn là chính nó, nếu nó bé hơn 0 thì sẽ bằng 0</p>
 
-<a href="https://imgur.com/Q6pgEGk"><img src="https://i.imgur.com/Q6pgEGk.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/Q6pgEGk"><img src="https://i.imgur.com/Q6pgEGk.png" title="source: imgur.com" height="300" width="380" /></a>
 
-<a href="https://imgur.com/kPzYrSp"><img src="https://i.imgur.com/kPzYrSp.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/kPzYrSp"><img src="https://i.imgur.com/kPzYrSp.png" title="source: imgur.com" height="300" width="380" /></a>
 
 ### Bước 5: Max Pooling Layer
 
