@@ -102,7 +102,7 @@
 
 <p>Đối với lĩnh vực toán học, một Neuron trong thế giới Machine Learning là một placeholder cho một phép toán, và công việc duy nhất của chúng là đưa ra một output bằng cách áp dụng phép toán trên các input cho sẵn.</p>
 
-<a href="https://imgur.com/Jlt4tqS"><img src="https://i.imgur.com/Jlt4tqS.png" title="source: imgur.com" height="400" width="200" /></a>
+<a href="https://imgur.com/Jlt4tqS"><img src="https://i.imgur.com/Jlt4tqS.png" title="source: imgur.com" height="200" width="450" /></a>
 
 <p>Các function sử dụng trong một neuron thường được gọi là một Activation Funtion. Hiện nay có rất nhiều các Activation Function như: step, sigmoid, tanh, ReLU, leaky ReLU, …</p>
 
