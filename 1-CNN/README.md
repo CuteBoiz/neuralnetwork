@@ -102,7 +102,7 @@
 
 <p>Đối với lĩnh vực toán học, một Neuron trong thế giới Machine Learning là một placeholder cho một phép toán, và công việc duy nhất của chúng là đưa ra một output bằng cách áp dụng phép toán trên các input cho sẵn.</p>
 
-<a href="https://imgur.com/Jlt4tqS"><img src="https://i.imgur.com/Jlt4tqS.png" title="source: imgur.com" height="200" width="450" /></a>
+<a href="https://imgur.com/Jlt4tqS"><img src="https://i.imgur.com/Jlt4tqS.png" title="source: imgur.com" height="200" width="400" /></a>
 
 <p>Các function sử dụng trong một neuron thường được gọi là một Activation Funtion. Hiện nay có rất nhiều các Activation Function như: step, sigmoid, tanh, ReLU, leaky ReLU, …</p>
 
@@ -141,7 +141,7 @@
 
 <p>Tanh(z) Function là phiên bản cải tiến của sigmoid fucntion và output của nó nằm trong khoảng [-1, 1] thay vì [0, 1]</p>
 
-<a href="https://imgur.com/WkmFDTc"><img src="https://i.imgur.com/WkmFDTc.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/WkmFDTc"><img src="https://i.imgur.com/WkmFDTc.png" title="source: imgur.com" height="300" width="300"/></a>
 
 <p>Lý do thông thường để dùng <i>Tanh Function</i> ở một số trường hợp thay cho <i>Sigmoid function</i> là vì khi dữ liệu nằm vòng quanh điểm 0, đạo hàm cao hơn. Và với độ dốc cao hơn sẽ giúp cải thiện <i>learning rate</i>.</p>
 
@@ -159,7 +159,7 @@
 
 <p>Trước khi hiểu về <i>Neural Network</i>, chúng ta cần biết được <i>Layer</i> bên trong chúng là gì. Một <i>Layer</i> không có nghĩa gì nhưng là một tập hợp các <i>Neuron</i> dùng để lấy các Input và đưa ra Output. Input của mỗi neuron được xử lí thông qua <i>Activation Function </i> định sẵn của mỗi neuron đó.</p>
 
-<a href="https://imgur.com/nLmWrgr"><img src="https://i.imgur.com/nLmWrgr.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/nLmWrgr"><img src="https://i.imgur.com/nLmWrgr.png" title="source: imgur.com" height="400" width="350"/></a>
 
 <p><i>Layer</i> bên trái ngoài cùng được gọi là <i>Input Layer</i>, và <i>Layer</i> bên phải ngoài cùng là <i>Output layer</i>. Các layer ở giữa được gọi là các <i>Hidden Layer</i> bởi vì giá trị của chúng không quan sát được bên trong. </p>
 
@@ -183,7 +183,7 @@
 
 <p><b> a. Convolution Function:</b> Convolution hoạt động dựa trên 2 tín hiệu (ở 1D) hoặc 2 tín hiệu (ở 2D): một </i>input signal</p> là 1 bức ảnh và <i>signal</i> còn lại  là 1 <i>Filter</i> hay <i>Kernel</i>. Và từ các input sẽ tạo ra 1 ảnh Ouput được gọi là <i>Feature Map</i>.</p>
 
-<a href="https://imgur.com/QlqXMrq"><img src="https://i.imgur.com/QlqXMrq.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/QlqXMrq"><img src="https://i.imgur.com/QlqXMrq.png" title="source: imgur.com" height="300" width="300"/></a>
 
 <p><b> b. Pooling Function:</b> Pooling là quá trình phân tách lấy mẫu. Đối tượng được thay đổi cách biểu diễn (image, hidden layer output, matrix, …) giảm số chiều và cho phép để giả định  để tạo ra các feature chứa trong các sub-regions đã được giảm chiều.</p>
 
@@ -311,7 +311,7 @@ l1_filter[1, :, :] = np.array([[[1, 1, 1],
 
 <p>Covolution là nhân từng phần tử của ma trận kernel với ảnh đầu vào. Kết quả nhận được một ma trận được gọi là <b><i>Feature Maps</i></b> hay <b><i>Convolved Feature</i></b>.</p>
 
-<a href="https://imgur.com/WDBRG2x"><img src="https://i.imgur.com/WDBRG2x.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/WDBRG2x"><img src="https://i.imgur.com/WDBRG2x.png" title="source: imgur.com" height="300" width="300"/></a>
 
 ```python
 feature_maps = conv(img, l1_filter)
