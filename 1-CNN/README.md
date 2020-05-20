@@ -141,7 +141,7 @@
 
 <p>Tanh(z) Function là phiên bản cải tiến của sigmoid fucntion và output của nó nằm trong khoảng [-1, 1] thay vì [0, 1]</p>
 
-<a href="https://imgur.com/WkmFDTc"><img src="https://i.imgur.com/WkmFDTc.png" title="source: imgur.com" height="300" width="300"/></a>
+<a href="https://imgur.com/WkmFDTc"><img src="https://i.imgur.com/WkmFDTc.png" title="source: imgur.com" height="300" width="400"/></a>
 
 <p>Lý do thông thường để dùng <i>Tanh Function</i> ở một số trường hợp thay cho <i>Sigmoid function</i> là vì khi dữ liệu nằm vòng quanh điểm 0, đạo hàm cao hơn. Và với độ dốc cao hơn sẽ giúp cải thiện <i>learning rate</i>.</p>
 
@@ -159,7 +159,7 @@
 
 <p>Trước khi hiểu về <i>Neural Network</i>, chúng ta cần biết được <i>Layer</i> bên trong chúng là gì. Một <i>Layer</i> không có nghĩa gì nhưng là một tập hợp các <i>Neuron</i> dùng để lấy các Input và đưa ra Output. Input của mỗi neuron được xử lí thông qua <i>Activation Function </i> định sẵn của mỗi neuron đó.</p>
 
-<a href="https://imgur.com/nLmWrgr"><img src="https://i.imgur.com/nLmWrgr.png" title="source: imgur.com" height="400" width="350"/></a>
+<a href="https://imgur.com/nLmWrgr"><img src="https://i.imgur.com/nLmWrgr.png" title="source: imgur.com" height="350" width="450"/></a>
 
 <p><i>Layer</i> bên trái ngoài cùng được gọi là <i>Input Layer</i>, và <i>Layer</i> bên phải ngoài cùng là <i>Output layer</i>. Các layer ở giữa được gọi là các <i>Hidden Layer</i> bởi vì giá trị của chúng không quan sát được bên trong. </p>
 
@@ -229,15 +229,13 @@
 
 <a href="https://imgur.com/ycsjjYv"><img src="https://i.imgur.com/ycsjjYv.png" title="source: imgur.com" /></a>
 
-<p></p>
+<p>Apply filter vào ảnh trong trường tiếp nhận cục bộ: </p>
 
 <a href="https://imgur.com/C9gLz6n"><img src="https://i.imgur.com/C9gLz6n.png" title="source: imgur.com" /></a>
 
-<p>Apply filter vào ảnh trong trường tiếp nhận cục bộ: </p>
+<p>Cơ bản, bên trong ảnh đầu vào nếu có một feature tương tự với filter sẽ cho ra một kết quả lớn. Nếu chuyến filter sang khu vực khác không trùng với filter thì sẽ cho kết quả bằng 0:</p>
 
 <a href="https://imgur.com/qILEz6L"><img src="https://i.imgur.com/qILEz6L.png" title="source: imgur.com" /></a>
-
-<p>Cơ bản, bên trong ảnh đầu vào nếu có một feature tương tự với filter sẽ cho ra một kết quả lớn. Nếu chuyến filter sang khu vực khác không trùng với filter thì sẽ cho kết quả bằng 0:</p>
 
 <p>Vì thế, convolution sẽ tìm ra được đúng đường cong trong filter dù nó nằm ở bất cứ đâu trên ảnh. </p>
 
@@ -290,7 +288,7 @@ img = skimage.color.rgb2gray(img)
 
 <p>Ảnh đầu vào: </p>
 
-<a href="https://imgur.com/wswHAyt"><img src="https://i.imgur.com/wswHAyt.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/wswHAyt"><img src="https://i.imgur.com/wswHAyt.png" title="source: imgur.com" height="400" width="450" /></a>
 
 ### Bước 2: Chuẩn Bị Kernel
 
@@ -307,11 +305,11 @@ l1_filter[1, :, :] = np.array([[[1, 1, 1],
 				[-1, -1, -1]]])
 ```
 
-### Bước 3: 
+### Bước 3: Convolution Layer
 
 <p>Covolution là nhân từng phần tử của ma trận kernel với ảnh đầu vào. Kết quả nhận được một ma trận được gọi là <b><i>Feature Maps</i></b> hay <b><i>Convolved Feature</i></b>.</p>
 
-<a href="https://imgur.com/WDBRG2x"><img src="https://i.imgur.com/WDBRG2x.png" title="source: imgur.com" height="300" width="300"/></a>
+<a href="https://imgur.com/WDBRG2x"><img src="https://i.imgur.com/WDBRG2x.png" title="source: imgur.com" height="300" width="400"/></a>
 
 ```python
 feature_maps = conv(img, l1_filter)
@@ -433,7 +431,7 @@ def ReLU(feature_maps):
 
 <p>Thuật toán relu là chỉ cần lặp qua từng phần tử của feature image nếu phần từ đó lớn hơn bằng 0 thì vẫn là chính nó, nếu nó bé hơn 0 thì sẽ bằng 0</p>
 
-<a href="https://imgur.com/Q6pgEGk"><img src="https://i.imgur.com/Q6pgEGk.png" title="source: imgur.com" height="" width="" /></a>
+<a href="https://imgur.com/Q6pgEGk"><img src="https://i.imgur.com/Q6pgEGk.png" title="source: imgur.com" /></a>
 
 <a href="https://imgur.com/kPzYrSp"><img src="https://i.imgur.com/kPzYrSp.png" title="source: imgur.com" /></a>
 
