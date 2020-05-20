@@ -124,7 +124,7 @@
 
 <p>Một <i>Sigmoid Function</i> hay <i>Logistic Funtion</i> được định nghĩa:</p>
 
-## IMG 3
+<a href="https://imgur.com/A61qqsq"><img src="https://i.imgur.com/A61qqsq.png" title="source: imgur.com" /></a>
 
 <p>Giá trị của function hướng về 0 khi z hoặc biến độc lập hướng về âm vô cực, hướng về 1 khi z hướng về dương vô cực. Function này biểu diễn sự hội tụ sự hoạt động của các biến độc lập.</p>
 
@@ -141,7 +141,7 @@
 
 <p>Tanh(z) Function là phiên bản cải tiến của sigmoid fucntion và output của nó nằm trong khoảng [-1, 1] thay vì [0, 1]</p>
 
-## IMG4
+<a href="https://imgur.com/WkmFDTc"><img src="https://i.imgur.com/WkmFDTc.png" title="source: imgur.com" /></a>
 
 <p>Lý do thông thường để dùng <i>Tanh Function</i> ở một số trường hợp thay cho <i>Sigmoid function</i> là vì khi dữ liệu nằm vòng quanh điểm 0, đạo hàm cao hơn. Và với độ dốc cao hơn sẽ giúp cải thiện <i>learning rate</i>.</p>
 
@@ -151,7 +151,7 @@
 
 <p><i>Rectified Linear Unit</i> được sử dụng rất nhiều trong các mô hình <i>Deep Learning</i>. Function này trả về 0 nếu nó nhận bất cứ giá trị input âm nào. Nhưng đối với các input dương nó sẽ trả về chính giá trị dương đó. Vì thế có thể viết f(x) = max(0, x).</p>
 
-## IMG 5
+<a href="https://imgur.com/aZ7d2XK"><img src="https://i.imgur.com/aZ7d2XK.png" title="source: imgur.com" /></a>
 
 ### 2. Neural Network
 
@@ -159,7 +159,7 @@
 
 <p>Trước khi hiểu về <i>Neural Network</i>, chúng ta cần biết được <i>Layer</i> bên trong chúng là gì. Một <i>Layer</i> không có nghĩa gì nhưng là một tập hợp các <i>Neuron</i> dùng để lấy các Input và đưa ra Output. Input của mỗi neuron được xử lí thông qua <i>Activation Function </i> định sẵn của mỗi neuron đó.</p>
 
-## IMG 6
+<a href="https://imgur.com/nLmWrgr"><img src="https://i.imgur.com/nLmWrgr.png" title="source: imgur.com" /></a>
 
 <p><i>Layer</i> bên trái ngoài cùng được gọi là <i>Input Layer</i>, và <i>Layer</i> bên phải ngoài cùng là <i>Output layer</i>. Các layer ở giữa được gọi là các <i>Hidden Layer</i> bởi vì giá trị của chúng không quan sát được bên trong. </p>
 
@@ -179,17 +179,17 @@
 
 <p>Thay vì sử dụng các <i>Activation Function</i> ở bên trên thì CNN sử dụng là <i>Convolution Function</i> và <i>Pooling Fucntion</i>.</p>
 
-## IMG 7
+<a href="https://imgur.com/fwYw8XC"><img src="https://i.imgur.com/fwYw8XC.png" title="source: imgur.com" /></a>
 
 <p><b> a. Convolution Function:</b> Convolution hoạt động dựa trên 2 tín hiệu (ở 1D) hoặc 2 tín hiệu (ở 2D): một </i>input signal</p> là 1 bức ảnh và <i>signal</i> còn lại  là 1 <i>Filter</i> hay <i>Kernel</i>. Và từ các input sẽ tạo ra 1 ảnh Ouput được gọi là <i>Feature Map</i>.</p>
 
-## IMG 8
+<a href="https://imgur.com/QlqXMrq"><img src="https://i.imgur.com/QlqXMrq.png" title="source: imgur.com" /></a>
 
 <p><b> b. Pooling Function:</b> Pooling là quá trình phân tách lấy mẫu. Đối tượng được thay đổi cách biểu diễn (image, hidden layer output, matrix, …) giảm số chiều và cho phép để giả định  để tạo ra các feature chứa trong các sub-regions đã được giảm chiều.</p>
 
 <p>Có 2 loại Pooling chính: <b><i>Max</i></b> và <b><i>Min pooling</i></b>.</p>
 
-## IMG 9
+<a href="https://imgur.com/spyNBvx"><img src="https://i.imgur.com/spyNBvx.png" title="source: imgur.com" /></a>
 
 <p>Vì vậy có thể xem CNN đơn giản là Deep Neural Network chứa các Hidden Layer bao gồm Covolution và Pooling Function. </p>
 
@@ -211,11 +211,11 @@
 
 <p>Tạo ra neuron ẩn đầu tiên trong lớp ẩn 1</p>
 
-## IMG 10
+<a href="https://imgur.com/3LYrv9C"><img src="https://i.imgur.com/3LYrv9C.png" title="source: imgur.com" /></a>
 
 <p>Dịch filter qua bên phải 1 cột sẽ tạo được neuron ẩn thứ 2</p>
 
-## IMG 11
+<a href="https://imgur.com/BqlnoIX"><img src="https://i.imgur.com/BqlnoIX.png" title="source: imgur.com" /></a>
 
 <p>Với ảnh 28x28 và filter 5x5 ta sẽ tạo được ma trận ẩn (28 - 5 + 1)  = 24x24</p>
 
@@ -227,15 +227,15 @@
 
 <p>Cho filter như hình bên dưới:</p>
 
-## IMG 12
+<a href="https://imgur.com/ycsjjYv"><img src="https://i.imgur.com/ycsjjYv.png" title="source: imgur.com" /></a>
 
 <p></p>
 
-## IMG 13
+<a href="https://imgur.com/C9gLz6n"><img src="https://i.imgur.com/C9gLz6n.png" title="source: imgur.com" /></a>
 
 <p>Apply filter vào ảnh trong trường tiếp nhận cục bộ: </p>
 
-## IMG 14
+<a href="https://imgur.com/qILEz6L"><img src="https://i.imgur.com/qILEz6L.png" title="source: imgur.com" /></a>
 
 <p>Cơ bản, bên trong ảnh đầu vào nếu có một feature tương tự với filter sẽ cho ra một kết quả lớn. Nếu chuyến filter sang khu vực khác không trùng với filter thì sẽ cho kết quả bằng 0:</p>
 
@@ -243,7 +243,7 @@
 
 <p>Với cấu trúc trên ta sẽ có thể phát hiện được chỉ một feature. Vì vậy nếu dùng nó cho các bài toán lớn hơn như phát hiện khuôn mặt thì ta sẽ cần nhiều hơn một feature map. Và 1 convolutional layer hoàn chỉnh sẽ bao gồm nhiều feature maps.</p>
 
-## IMG 15
+<a href="https://imgur.com/A2JeChm"><img src="https://i.imgur.com/A2JeChm.png" title="source: imgur.com" /></a>
 
 <p>Điểm mạnh lớn nhất của sharing weights and biases là giảm mạnh số các thông số bên trong convolutional network.</p>
 
@@ -253,12 +253,11 @@
 
 <p>Ngoài các lớp trên, CNN còn có các Pooling Layers. Pooling Layer thường được dùng ngay sau các Convolutional Layer. Chức năng của lớp này là đơn giản hóa giảm bớt số lượng neuron đầu ra của Convolutional Layer.</p>
 
-
-## IMG 16
+<a href="https://imgur.com/V8RNGvP"><img src="https://i.imgur.com/V8RNGvP.png" title="source: imgur.com" /></a>
 
 <p>Nếu áp dùng Pooling cho map 24x24 thì sau khi pooling Feature map đó sẽ chỉ còn lại kích thước 12x12</p>
 
-## IMG 17
+<a href="https://imgur.com/ffdXrCb"><img src="https://i.imgur.com/ffdXrCb.png" title="source: imgur.com" /></a>
 
 <p>Ta có thể cho rằng max-pooling như một cách tìm feature được phát hiện ở vùng nào trên ảnh. Sau đó nó sẽ đưa ra thông tin vị trí chính xác. Một lợi ích lớn là có ít hơn nhiều các pooled feature vì vậy chúng giúp giảm số lượng lớn các thông số cho các lớp sau này.</p>
 
@@ -289,7 +288,9 @@ img = skimage.data.chelsea()
 img = skimage.color.rgb2gray(img)
 ```
 
-## IMG 18
+<p>Ảnh đầu vào: </p>
+
+<a href="https://imgur.com/wswHAyt"><img src="https://i.imgur.com/wswHAyt.png" title="source: imgur.com" /></a>
 
 ### Bước 2: Chuẩn Bị Kernel
 
@@ -310,7 +311,7 @@ l1_filter[1, :, :] = np.array([[[1, 1, 1],
 
 <p>Covolution là nhân từng phần tử của ma trận kernel với ảnh đầu vào. Kết quả nhận được một ma trận được gọi là <b><i>Feature Maps</i></b> hay <b><i>Convolved Feature</i></b>.</p>
 
-## IMG 19
+<a href="https://imgur.com/WDBRG2x"><img src="https://i.imgur.com/WDBRG2x.png" title="source: imgur.com" /></a>
 
 ```python
 feature_maps = conv(img, l1_filter)
@@ -407,8 +408,9 @@ def conv_(img, filter):
 	return final_result
 ```
 
-## IMG 20
-## IMG 21
+<a href="https://imgur.com/3p7Z89M"><img src="https://i.imgur.com/3p7Z89M.png" title="source: imgur.com" /></a>
+
+<a href="https://imgur.com/yPKr99C"><img src="https://i.imgur.com/yPKr99C.png" title="source: imgur.com" /></a>
 
 <p>Từng output của mỗi filter sau đó sẽ được đưa vào ReLU Layer</p>
 
@@ -431,8 +433,9 @@ def ReLU(feature_maps):
 
 <p>Thuật toán relu là chỉ cần lặp qua từng phần tử của feature image nếu phần từ đó lớn hơn bằng 0 thì vẫn là chính nó, nếu nó bé hơn 0 thì sẽ bằng 0</p>
 
-## IMG 22
-## IMG 23
+<a href="https://imgur.com/Q6pgEGk"><img src="https://i.imgur.com/Q6pgEGk.png" title="source: imgur.com" /></a>
+
+<a href="https://imgur.com/kPzYrSp"><img src="https://i.imgur.com/kPzYrSp.png" title="source: imgur.com" /></a>
 
 ### Bước 5: Max Pooling Layer
 
@@ -457,10 +460,10 @@ def pooling(feature_maps, size=2, stride=2):
 	return pool_out
 ```
 
-## IMG 24
-## IMG 25
+<a href="https://imgur.com/KWosq0w"><img src="https://i.imgur.com/KWosq0w.png" title="source: imgur.com" /></a>
 
-Full Code: 
+<a href="https://imgur.com/NYGtO11"><img src="https://i.imgur.com/NYGtO11.png" title="source: imgur.com" /></a>
+
 
 ## IV. NGUỒN THAM KHẢO
 
