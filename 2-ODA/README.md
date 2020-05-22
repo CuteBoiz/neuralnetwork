@@ -57,7 +57,8 @@
 
 ### IMG 2
 
-<p>2000 vùng này sẽ được bao bọc trong các khung để đưa vào CNN và tạo ra<i> Feature Vector</i> có 4096-chiều. CNN có chức năng như một <b><i>Feature Extractor</i></b> và đầu ra sẽ chứa những <i>Feature</i> trích xuất được từ ảnh và được đưa vào các <b><i>SVM</i></b>(Support Vector Machine) để phân loại sự hiện diện của vật thể bên trong các <i>Proposal Regions</i>.
+<p>2000 vùng này sẽ được bao bọc trong các khung để đưa vào CNN và tạo ra<i> Feature Vector</i> có 4096-chiều. CNN có chức năng như một <b><i>Feature Extractor</i></b> và đầu ra sẽ chứa những <i>Feature</i> trích xuất được từ ảnh và được đưa vào các <b><i>SVM</i></b>(Support Vector Machine) để phân loại sự hiện diện của vật thể bên trong các <i>Proposal Regions</i>.</p>
+
 <p>Thuật toán này có thể dự đoán sự hiện diện của con người nhưng khuôn mặt có thể bên trong vùng đó có thể bị cắt đôi. Vì thế, những offset value giúp điều chỉnh những <i>Bounding Box</i> của <i>Proposal Region</i> này.</p>
 
 ### IMG 3
@@ -75,7 +76,7 @@
 
 ### IMG 4
 
-<p>Tác giả của <i><b>R-CNN</b></i> đã giải quyết những vấn đề của R-CNN bằng cách tạo ra một thuật toán nhanh hơn được gọi là <b><i>Fast R-CNN</i></b>. Cách tiếp cận tương tự với <i>R-CNN</i>, nhưng thay vì đưa các <i>Proposal Region<i> vào CNN thì ta đưa ảnh input vào trực tiếp CNN để tạo ra các <b><i>Feature map</i></b>. Và từ các <i>Feature Map</i> ta sẽ xác định các <i>Proposal Region</i> và bọc chúng trong các khung và sau đó sử dụng <b><i>RoI Pooling Layer</i></b> ta reshape chúng thành kích cỡ cố định để có thể đưa vào <i>Fully Connected Layer</i>. Từ <i>RoI Feature Vector</i>, chúng ta sẽ dụng <i>Softmax Layer</i> để dự đoán class cho các <i>Proposed Region</i> và các <i>Offset Value</i> cho <i>Bounding Box</i>.</p>
+<p>Tác giả của <i><b>R-CNN</b></i> đã giải quyết những vấn đề của R-CNN bằng cách tạo ra một thuật toán nhanh hơn được gọi là <b><i>Fast R-CNN</i></b>. Cách tiếp cận tương tự với <i>R-CNN</i>, nhưng thay vì đưa các <i>Proposal Region</i> vào CNN thì ta đưa ảnh input vào trực tiếp CNN để tạo ra các <b><i>Feature map</i></b>. Và từ các <i>Feature Map</i> ta sẽ xác định các <i>Proposal Region</i> và bọc chúng trong các khung và sau đó sử dụng <b><i>RoI Pooling Layer</i></b> ta reshape chúng thành kích cỡ cố định để có thể đưa vào <i>Fully Connected Layer</i>. Từ <i>RoI Feature Vector</i>, chúng ta sẽ dụng <i>Softmax Layer</i> để dự đoán class cho các <i>Proposed Region</i> và các <i>Offset Value</i> cho <i>Bounding Box</i>.</p>
 
 <p>Lý do <i>Fast R-CNN</i> nhanh hơn <i>R-CNN</i> là vì Fast R-CNN không cần phải đưa cả 2000 vùng vào CNN để <i>convolution</i> với mỗi vùng. Mà thay vào đó ta chỉ cần thực hiện <i>covolution</i> với ảnh đầu vào và với <i>Feature Map</i> được tạo ra bởi ảnh đó. </p>
 
