@@ -45,11 +45,11 @@
 
 ## II. REGION-COVOLUTIONAL NEURAL NETWORK(R-CNN)
 
-<p>Để tránh khỏi vấn đề về chọn số lượng lớn các phân vùng, nhóm của <i>Ross Girshick</i> đã dề xuất một phương pháp sử dụng <b><i>Selective Search</i></b> để trích ra 2000 vùng trong ảnh và gọi đó là các <b><i>Proposal Region</i></b> (vùng trọng điểm). Vì thế thay vì nhận dạng số lượng lớn các phân vùng, thì với giải thuật này ta chỉ cần làm việc với 2000 vùng. Và 2000 vùng này có thể được tạo ra nhờ giải thuật <i>Selective Search</i>:  </p>
+<p>Để tránh khỏi vấn đề về chọn số lượng lớn các phân vùng, nhóm của <i>Ross Girshick</i> đã dề xuất một phương pháp sử dụng <b><i>Selective Search</i></b> để trích ra 2000 vùng trong ảnh và gọi đó là các <b><i>Proposal Region</i></b> (Vùng trọng điểm). Vì thế thay vì nhận dạng số lượng lớn các phân vùng, thì với giải thuật này ta chỉ cần làm việc với 2000 vùng. Và 2000 vùng này có thể được tạo ra nhờ giải thuật <i>Selective Search</i>:  </p>
 
 <ul>
 	<li>Tạo ra số lượng lớn các phân vùng phụ khởi tạo</li>
-	<li>Sử dụng giải thuật tham lam(greedy) để kết hợp đệ quy các vùng tương tự nhau thành các vùng lớn hơn</li>
+	<li>Sử dụng giải thuật tham lam (Greedy Algorithm) để kết hợp đệ quy các vùng tương tự nhau thành các vùng lớn hơn</li>
 	<li>Sử dụng những phân vùng đã được kết hợp đó để tạo ra các <b><i>Proposal Region</i></b></li>
 </ul>
 
@@ -67,7 +67,7 @@
 <ul>
 	<li>Vẫn tốn rất nhiều thời gian để train vì cần xác định 2000 vùng cho mỗi ảnh</li>
 	<li>Không thể thực hiện reatime vì cần đến 47s cho mỗi ảnh test</li>
-	<li>Selective search là một giải thuật cố định. Vì thế sẽ không thể training tại bước này. Điều này sẽ tạo ra những <i>Bad Proposal Region</i>.</li>
+	<li>Selective search là một giải thuật cố định. Vì thế sẽ không thể training tại bước này. Điều này sẽ tạo ra những <i><b>Bad</b> Proposal Region</i>.</li>
 </ul>
 
 
