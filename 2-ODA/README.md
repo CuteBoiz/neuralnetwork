@@ -88,7 +88,7 @@
 
 <p>Tương tự như Fast R-CNN, Faster R-CNN đưa ảnh input vào CNN để tạo ra các <i>Feature Map</i>. Và thay vì sử dụng <i>Selective Search</i> để tìm các vùng trọng điểm thì một network độc lập khác sẽ được sử dụng để dự đoán các vùng này. Những vùng được dự đoán này sẽ được đưa đến <i>RoI Pooling Layer</i> để reshape và sau đó sẽ được xác định class.</p>
 
-<a href="https://imgur.com/hzkX3yT"><img src="https://i.imgur.com/hzkX3yT.png" title="source: imgur.com" height="300" width="500" /></a>
+<a href="https://imgur.com/hzkX3yT"><img src="https://i.imgur.com/hzkX3yT.png" title="source: imgur.com" height="250" width="500" /></a>
 
 <p>Bảng trên cho thấy Faster R-CNN nhanh hơn rất nhiều so với các tiền nhiệm . Vì thế Faster R-CNN có thể được sử dụng cho việc nhận dạng vật thể thười gian thực (Real-time Object Detection).</p>
 
