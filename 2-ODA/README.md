@@ -82,13 +82,13 @@
 
 ## IV. FASTER REGION-COVOLUTIONAL NEURAL NETWORK
 
-<a href="https://imgur.com/nbbI57r"><img src="https://i.imgur.com/nbbI57r.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/nbbI57r"><img src="https://i.imgur.com/nbbI57r.png" title="source: imgur.com" height="500" width="550" /></a>
 
 <p>Cả 2 thuật toán R-CNN và Fast R-CNN đêu sử dụng <i>Selective Search</i> để tìm ra các <i>Proposal Region. Selective Search</i> là một thuật toán chậm và tốn thời gian và ảnh hưởng không nhỏ đến hiệu suất của toàn bộ network. Vì thế nhóm của Shaoqing Ren đã đưa ra một giải thuật Object Detection loại bỏ <i>Selective Search</i> và để network học cách lấy các vùng trọng điểm.</p>
 
 <p>Tương tự như Fast R-CNN, Faster R-CNN đưa ảnh input vào CNN để tạo ra các <i>Feature Map</i>. Và thay vì sử dụng <i>Selective Search</i> để tìm các vùng trọng điểm thì một network độc lập khác sẽ được sử dụng để dự đoán các vùng này. Những vùng được dự đoán này sẽ được đưa đến <i>RoI Pooling Layer</i> để reshape và sau đó sẽ được xác định class.</p>
 
-<a href="https://imgur.com/hzkX3yT"><img src="https://i.imgur.com/hzkX3yT.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/hzkX3yT"><img src="https://i.imgur.com/hzkX3yT.png" title="source: imgur.com" height="300" width="500" /></a>
 
 <p>Bảng trên cho thấy Faster R-CNN nhanh hơn rất nhiều so với các tiền nhiệm . Vì thế Faster R-CNN có thể được sử dụng cho việc nhận dạng vật thể thười gian thực (Real-time Object Detection).</p>
 
