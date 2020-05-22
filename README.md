@@ -13,7 +13,7 @@ Some Variants Of Neural Network
 </li>
 <li>
 
-[2. OBJECT DETECTION ALGORITHMS](https://github.com/CuteBoiz/neuralnetwork/tree/master/)
+[2. OBJECT DETECTION ALGORITHMS](https://github.com/CuteBoiz/neuralnetwork/tree/master/2-ODA)
 
 </li>
 <li>
