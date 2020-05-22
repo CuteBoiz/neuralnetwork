@@ -78,7 +78,7 @@
 
 <p>Tác giả của <i><b>R-CNN</b></i> đã giải quyết những vấn đề của R-CNN bằng cách tạo ra một thuật toán nhanh hơn được gọi là <b><i>Fast R-CNN</i></b>. Cách tiếp cận tương tự với <i>R-CNN</i>, nhưng thay vì đưa các <i>Proposal Region</i> vào CNN thì ta đưa ảnh input vào trực tiếp CNN để tạo ra các <b><i>Feature map</i></b>. Và từ các <i>Feature Map</i> ta sẽ xác định các <i>Proposal Region</i> và bọc chúng trong các khung và sau đó sử dụng <b><i>RoI Pooling Layer</i></b> ta reshape chúng thành kích cỡ cố định để có thể đưa vào <i>Fully Connected Layer</i>. Từ <i>RoI Feature Vector</i>, chúng ta sẽ dụng <i>Softmax Layer</i> để dự đoán class cho các <i>Proposed Region</i> và các <i>Offset Value</i> cho <i>Bounding Box</i>.</p>
 
-<p>Lý do <i>Fast R-CNN</i> nhanh hơn <i>R-CNN</i> là vì Fast R-CNN không cần phải đưa cả 2000 vùng vào CNN để <i>convolution</i> với mỗi vùng. Mà thay vào đó ta chỉ cần thực hiện <i>covolution</i> với ảnh đầu vào và với <i>Feature Map</i> được tạo ra bởi ảnh đó. </p>
+<p>Lý do <i>Fast R-CNN</i> nhanh hơn <i>R-CNN</i> là vì Fast R-CNN không cần phải đưa cả 2000 vùng trọng điểm vào CNN và <i>convolution</i> với mỗi vùng. Mà thay vào đó ta chỉ cần thực hiện <i>covolution</i> với ảnh đầu vào và với <i>Feature Map</i> được tạo ra bởi ảnh đó. </p>
 
 ### IMG 5
 
