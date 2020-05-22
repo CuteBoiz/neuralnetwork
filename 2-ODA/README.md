@@ -4,32 +4,32 @@
 <ul>
 <li>
 
-[I. INTRODUCTION](https://github.com/CuteBoiz/neuralnetwork/tree/master/)
+[I. INTRODUCTION](https://github.com/CuteBoiz/neuralnetwork/tree/master/2-ODA#i-introduction)
 
 </li>
 <li>
 
-[II. REGION-COVOLUTIONAL NEURAL NETWORK(R-CNN)](https://github.com/CuteBoiz/neuralnetwork/tree/master/)
+[II. REGION-COVOLUTIONAL NEURAL NETWORK(R-CNN)](https://github.com/CuteBoiz/neuralnetwork/tree/master/2-ODA#ii-region-covolutional-neural-networkr-cnn)
 
 </li>
 <li>
 
-[III. FAST REGION-COVOLUTIONAL NEURAL NETWORK](https://github.com/CuteBoiz/neuralnetwork/tree/master/)
+[III. FAST REGION-COVOLUTIONAL NEURAL NETWORK](https://github.com/CuteBoiz/neuralnetwork/tree/master/2-ODA#iii-fast-region-covolutional-neural-network)
 
 </li>
 <li>
 
-[IV. FASTER REGION-COVOLUTIONAL NEURAL NETWORK](https://github.com/CuteBoiz/neuralnetwork/tree/master/)
+[IV. FASTER REGION-COVOLUTIONAL NEURAL NETWORK](https://github.com/CuteBoiz/neuralnetwork/tree/master/#iv-faster-region-covolutional-neural-network)
 
 </li>
 <li>
 
-[V. YOU ONLY LOOK ONCE (YOLO)](https://github.com/CuteBoiz/neuralnetwork/tree/master/)
+[V. YOU ONLY LOOK ONCE (YOLO)](https://github.com/CuteBoiz/neuralnetwork/tree/master/2-ODA#v-you-only-look-once-yolo)
 
 </li>
 <li>
 
-[VI. SOURCE](https://github.com/CuteBoiz/neuralnetwork/tree/master/)
+[VI. SOURCE](https://github.com/CuteBoiz/neuralnetwork/tree/master/2-ODA#vi-source)
 
 </li>
 </ul>
@@ -90,7 +90,7 @@
 
 <a href="https://imgur.com/hzkX3yT"><img src="https://i.imgur.com/hzkX3yT.png" title="source: imgur.com" height="250" width="500" /></a>
 
-<p>Bảng trên cho thấy Faster R-CNN nhanh hơn rất nhiều so với các tiền nhiệm . Vì thế Faster R-CNN có thể được sử dụng cho việc nhận dạng vật thể thười gian thực (Real-time Object Detection).</p>
+<p>Bảng trên cho thấy Faster R-CNN nhanh hơn rất nhiều so với các tiền nhiệm . Vì thế Faster R-CNN có thể được sử dụng cho việc nhận dạng vật thể thời gian thực (Real-time Object Detection).</p>
 
 ## V. YOU ONLY LOOK ONCE (YOLO)
 
