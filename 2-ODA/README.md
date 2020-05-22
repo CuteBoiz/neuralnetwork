@@ -45,7 +45,7 @@
 
 ## II. REGION-COVOLUTIONAL NEURAL NETWORK(R-CNN)
 
-<p>Để tránh khỏi vấn đề về chọn số lượng lớn các phân vùng, nhóm của <i>Ross Girshick</i> đã dề xuất một phương pháp sử dụng <b><i>Selective Search</i><b> để trích ra 2000 vùng trong ảnh và gọi đó là các <b><i>Proposal Region</i></b> (vùng trọng điểm). Vì thế thay vì nhận dạng số lượng lớn các phân vùng, thì với giải thuật này ta chỉ cần làm việc với 2000 vùng. Và 2000 vùng này có thể được tạo ra nhờ giải thuật <i>Selective Search</i>:  </p>
+<p>Để tránh khỏi vấn đề về chọn số lượng lớn các phân vùng, nhóm của <i>Ross Girshick</i> đã dề xuất một phương pháp sử dụng <b><i>Selective Search</i></b> để trích ra 2000 vùng trong ảnh và gọi đó là các <b><i>Proposal Region</i></b> (vùng trọng điểm). Vì thế thay vì nhận dạng số lượng lớn các phân vùng, thì với giải thuật này ta chỉ cần làm việc với 2000 vùng. Và 2000 vùng này có thể được tạo ra nhờ giải thuật <i>Selective Search</i>:  </p>
 
 <ul>
 	<li>Tạo ra số lượng lớn các phân vùng phụ khởi tạo</li>
