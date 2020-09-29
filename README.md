@@ -1,4 +1,4 @@
-# neuralnetwork
+# Neural Networks
 Some Variants Of Neural Network
 
 #### By Tan Phat Nguyen 
